@@ -65,7 +65,7 @@ const stylesSelect = () =>({
 const SearchInput = withStyles(stylesInput)(TextField);
 const SelectFormControlStyled = withStyles(stylesSelect)(FormControl);
 
-function NewsList() {
+function NewsList({searchParams}) {
     const [newsList, setNews] = useState([]);
 
     const [submit, setSubmit] = useState(0);
@@ -98,7 +98,11 @@ function NewsList() {
     }
     useEffect(() => {
         const cb = () => {
-            getArticles();
+          const search = searchParams.get('search');
+          if(search){
+            setFilters({...filters, title_contains: search});
+          }
+          setSubmit(true);
         }
         cb();
     }, []);

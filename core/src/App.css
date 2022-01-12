@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+
+body {
+	font-family: "Roboto", Arial, sans-serif;
+	min-height: 100vh;
+	--color-1: #302E52;
+	--color-2: #1E2022;
+	--color-3: #D07017;
+	--border-color-input: #a3a3a3; 
+	background-color: var(--color-1);
+  --heading-height: 10em;
+  
+}

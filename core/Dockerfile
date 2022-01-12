@@ -10,7 +10,7 @@ COPY ./ /app/
 
 RUN apt-get update
 
-RUN apt-get install nginx
+RUN apt-get install  -y nginx
 
 COPY /app/build/* /var/www/html
 

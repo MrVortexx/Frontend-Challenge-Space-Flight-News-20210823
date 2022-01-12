@@ -1,18 +1,19 @@
-FROM tiangolo/node-frontend:10 as build-stage
+FROM  node:alpine
 
 WORKDIR /app
 
-COPY package*.json /app/
-
 RUN npm install
-
-COPY ./ /app/
 
 RUN npm run build
 
-FROM nginx:1.15
+COPY ./ /app/
 
-COPY --from=build-stage /app/build/ /usr/share/nginx/html
+RUN apt-get update
 
-COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
+RUN apt-get install nginx
 
+COPY /app/build/* /var/www/html
+
+COPY ../docker/httpd/nginx.conf /etc/nginx/conf.d/default
+
+RUN  /etc/init.d/nginx start

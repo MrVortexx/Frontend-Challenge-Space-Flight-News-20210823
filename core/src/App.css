@@ -9,6 +9,7 @@ body {
 	--color-3: #D07017;
 	--border-color-input: #a3a3a3; 
 	background-color: var(--color-1);
-  --heading-height: 10em;
+  --heading-height: 30em;
+  --heading-height-mobile: 20em;
   
 }

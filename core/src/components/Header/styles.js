@@ -7,6 +7,8 @@ export const HeaderStyles = styled.header`
 
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 10px;
     h1 {
         font-size: 3rem;
@@ -14,7 +16,11 @@ export const HeaderStyles = styled.header`
         letter-spacing: .01em;
         text-shadow: .022em .022em .022em #111;
         color: var(--border-color-input);
-        margin: 0;
+        margin: 30px 0 0 0;
+    }
+
+    @media(max-width: 600px){
+        height: var(--heading-height-mobile);
     }
 
 `;

@@ -7,7 +7,7 @@ import NewsList from '../../components/News/NewsList';
 
 
 function Home() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, ] = useSearchParams();
 
   return (
       <>

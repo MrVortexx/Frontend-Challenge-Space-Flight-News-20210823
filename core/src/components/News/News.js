@@ -54,14 +54,14 @@ export default function News({data, isInverted = false}) {
     
  
     return (
-        <NewsCard>  
+        <NewsCard isInverted={isInverted}>  
 
-            <Card sx={{bgcolor: '#D07017', filter: 'drop-shadow(0 10px 0.3rem #000);', display: 'flex', flexDirection: `${isInverted? 'row-reverse': ''}`}}>
+            <Card className="card" >
                 <NewsImageStyles>
                     <img src={data.imageUrl} alt="" sx={{width: '250px', maxWidth: '200px'}}/>
                 </NewsImageStyles>
 
-                <CardContent>
+                <CardContent >
                     <Typography variant="h5" component="div">
                         {data.title}
                     </Typography>
@@ -114,17 +114,17 @@ export default function News({data, isInverted = false}) {
                             <Box>
                                 <Typography sx={{ fontSize: 15, marginTop: '50px' }} >
                                     Ultima atualizacao:  
-                                    <Typography sx={{ marginLeft: '40px' }}>
+                                </Typography>
+                                <Typography sx={{ marginLeft: '40px' }}>
                                         {  dateService.formatDate(data.updatedAt)}
                                     </Typography>
-                                </Typography>
                                 <Typography sx={{ fontSize: 13, marginTop: '10px' }} >
                                     Fonte:  
-                                    <Link href='#' onClick={() => {browserService.openSite(browserService.getSiteHostname(data.url))}} sx={{ marginLeft: '40px' }} >
+                                  
+                                </Typography>
+                                <Link href='#' onClick={() => {browserService.openSite(browserService.getSiteHostname(data.url))}} sx={{ marginLeft: '40px' }} >
                                         {browserService.getSiteHostname(data.url)}
                                     </Link>
-                                </Typography>
-                               
                             </Box>
 
                         </Box>

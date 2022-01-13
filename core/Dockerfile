@@ -1,4 +1,4 @@
-FROM node:alpiner
+FROM node:alpine as builder
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY . .
 
 RUN yarn install && yarn build
 
-FROM arm64v8/nginx
+FROM nginx:alpine
 
 WORKDIR /usr/share/nginx/html
 

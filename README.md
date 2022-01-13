@@ -17,18 +17,22 @@ Frontend desafio que utiliza a Spaceflight News API  3.4.0
 
 <hr>
 
-### Utilizando o aplicativo sem precisar baixar nada
+# Executando a aplicação
 
-* Voce pode acessar via esta url que está hospedada no meu servidor rapsbery pi
-### Como executar o projeto Localmente:
+## Utilizando o aplicativo sem precisar baixar nada
 
-# Via Docker e Docker Compose*
+* Voce pode acessar via esta url que está hospedada no meu servidor rapsbery pi : [clique aqui](https://5d8b-138-204-87-182.ngrok.io) 
+* Obs: O servidor foi hospedado no meu próprio raspberry pi, e o tunelamento foi feito via ngrok, logo, pode reiniciar as vezes e a url será alterada, então pode ser que não esteja de volta no momento.
+
+## Como executar o projeto Localmente:
+
+### Via Docker e Docker Compose*
 $ Para rodar nesta forma voce necessita de ter instalado o docker e o docker compose na sua máquina, além de precisar que a porta 80 esteja liberada $
 * 1 - Via terminal, entre na pasta /docker deste repositório
 * 2 - Execute o comando 'docker_compose build'
 * 3 - Por fim, execute o comando 'docker_compose up -d'
 
-# De forma manual
+### De forma manual
 $ Para rodar nesta forma voce precisa ter o node instalado na sua máquina, além de precisar que a porta 3000 esteja liberada$
 * 1 - Via terminal, entre na pasta /core deste repositório
 * 2 - Execute o comando 'npm install'

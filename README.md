@@ -21,7 +21,7 @@ Frontend desafio que utiliza a Spaceflight News API  3.4.0
 
 ## Utilizando o aplicativo sem precisar baixar nada
 
-* Voce pode acessar via esta url que está hospedada no meu servidor rapsbery pi : [clique aqui](https://5d8b-138-204-87-182.ngrok.io) 
+* Voce pode acessar via esta url que está hospedada no meu servidor rapsbery pi : [clique aqui](https://5bb0-138-204-87-182.ngrok.io/) 
 * Obs: O servidor foi hospedado no meu próprio raspberry pi, e o tunelamento foi feito via ngrok, logo, pode reiniciar as vezes e a url será alterada, então pode ser que não esteja de volta no momento.
 
 ## Como executar o projeto Localmente:

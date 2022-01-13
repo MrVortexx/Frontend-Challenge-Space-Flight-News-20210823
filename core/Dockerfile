@@ -1,19 +1,19 @@
-FROM  node:alpine
+FROM node:alpiner
 
 WORKDIR /app
 
-RUN npm install
+COPY . .
 
-RUN npm run build
+RUN yarn install && yarn build
 
-COPY ./ /app/
+FROM arm64v8/nginx
 
-RUN apt-get update
+WORKDIR /usr/share/nginx/html
 
-RUN apt-get install  -y nginx
+RUN rm -rf ./*
 
-COPY /app/build/* /var/www/html
+COPY ./httpd/nginx.conf /etc/nginx/conf.d/default
 
-COPY ../docker/httpd/nginx.conf /etc/nginx/conf.d/default
+COPY --from=builder /app/build .
 
-RUN  /etc/init.d/nginx start
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

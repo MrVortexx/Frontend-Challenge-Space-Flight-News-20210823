@@ -59,6 +59,12 @@ const stylesSelect = () =>({
       '& .MuiInputLabel-root':{
         color: 'var(--border-color-input);',
       },
+      '& .MuiSvgIcon-root': {
+        color:'var(--border-color-input);',
+      },
+      '& .MuiSvgIcon-root': {
+        color:'var(--border-color-input);',
+      }
   },
 });
 
@@ -145,8 +151,9 @@ function NewsList({searchParams}) {
             <NewsSearchForm>
                 <div>
                   <SearchInput id="outlined-basic" label="Busca" name='title_contains' onKeyPress={handleKeyPress}
-                    variant="outlined" style={{marginRight: '50px', color: 'var(--border-color-input)'}} onChange={handleChangeSearchInput}
+                    variant="outlined"onChange={handleChangeSearchInput}
                       InputProps={{
+                        style: {marginRight: '50px', color: 'var(--border-color-input)'},
                           endAdornment: (
                           <InputAdornment position="end" onClick={getArticles}>
                               <SearchIcon style={{color: 'var(--border-color-input)', borderColor: '#fff', cursor: 'pointer'}} />
@@ -165,6 +172,7 @@ function NewsList({searchParams}) {
                     onChange={handleChangeSort}
                     label="Ordenação"
                     labelId="select-label"
+                  
                   >
                     <MenuItem value="">
                       Nenhuma
